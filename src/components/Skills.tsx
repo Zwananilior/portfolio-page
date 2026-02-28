@@ -2,12 +2,23 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
 
+import { 
+  FaReact, 
+  FaJs, 
+  FaHtml5, 
+  FaCss3Alt, 
+  FaGitAlt 
+} from "react-icons/fa";
+
+import { SiTypescript } from "react-icons/si";
+
 const technicalSkills = [
-  { name: "React / React Native", level: 85 },
-  { name: "TypeScript", level: 80 },
-  { name: "JavaScript", level: 85 },
-  { name: "HTML & CSS", level: 90 },
-  { name: "Git & Version Control", level: 50 },
+  { name: "React", level: 85, icon: FaReact },
+  { name: "TypeScript", level: 80, icon: SiTypescript },
+  { name: "JavaScript", level: 85, icon: FaJs },
+  { name: "HTML", level: 90, icon: FaHtml5 },
+  { name: "CSS", level: 90, icon: FaCss3Alt },
+  { name: "Git", level: 70, icon: FaGitAlt },
 ];
 
 const professionalSkills = [
@@ -29,25 +40,33 @@ const Skills = () => {
     <section
       id="skills"
       ref={ref}
-      className="scroll-mt-24 min-h-screen bg-[#081b29] flex flex-col items-center justify-center px-16"
+      className="scroll-mt-24 min-h-screen bg-[#081b29] flex flex-col items-center justify-center px-6 sm:px-10 lg:px-16 py-20"
     >
-      <h2 className="text-4xl font-bold mb-16">
+      <h2 className="text-3xl sm:text-4xl font-bold mb-16">
         My <span className="text-primary">Skills</span>
       </h2>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 w-full max-w-6xl">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 w-full max-w-6xl">
 
-        {/* LEFT SIDE - Technical */}
+        {/* LEFT SIDE - Technical Skills */}
         <div>
-          <h3 className="text-xl mb-8 font-semibold">Technical Skills</h3>
+          <h3 className="text-xl mb-8 font-semibold">
+            Technical Skills
+          </h3>
 
           {technicalSkills.map((skill, index) => (
             <div key={index} className="mb-6">
-              <div className="flex justify-between mb-2">
-                <span>{skill.name}</span>
+
+              {/* Skill Header */}
+              <div className="flex justify-between items-center mb-2">
+                <div className="flex items-center gap-3">
+                  <skill.icon className="text-primary text-xl drop-shadow-[0_0_6px_#00f0ff]" />
+                  <span>{skill.name}</span>
+                </div>
                 <span>{skill.level}%</span>
               </div>
 
+              {/* Progress Bar */}
               <div className="w-full bg-gray-700 h-2 rounded-full">
                 <motion.div
                   initial={{ width: 0 }}
@@ -56,13 +75,16 @@ const Skills = () => {
                   className="h-2 bg-primary rounded-full shadow-[0_0_10px_#00f0ff]"
                 />
               </div>
+
             </div>
           ))}
         </div>
 
-        {/* RIGHT SIDE - Professional */}
+        {/* RIGHT SIDE - Professional Skills */}
         <div>
-          <h3 className="text-xl mb-8 font-semibold">Professional Skills</h3>
+          <h3 className="text-xl mb-8 font-semibold">
+            Professional Skills
+          </h3>
 
           <div className="grid grid-cols-2 gap-10">
             {professionalSkills.map((skill, index) => {
@@ -72,7 +94,9 @@ const Skills = () => {
 
               return (
                 <div key={index} className="flex flex-col items-center">
+
                   <svg width="120" height="120">
+                    {/* Background Circle */}
                     <circle
                       cx="60"
                       cy="60"
@@ -82,6 +106,7 @@ const Skills = () => {
                       fill="transparent"
                     />
 
+                    {/* Animated Progress Circle */}
                     <motion.circle
                       cx="60"
                       cy="60"
@@ -100,18 +125,20 @@ const Skills = () => {
                   <span className="mt-3 font-semibold">
                     {skill.level}%
                   </span>
-                  <span className="text-gray-400 text-sm">
+
+                  <span className="text-gray-400 text-sm text-center">
                     {skill.name}
                   </span>
+
                 </div>
               );
             })}
           </div>
         </div>
+
       </div>
     </section>
   );
 };
 
 export default Skills;
-
