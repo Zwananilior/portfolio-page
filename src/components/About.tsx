@@ -33,7 +33,7 @@ const About = () => {
           className="text-white max-w-xl"
         >
           <h2 className="text-4xl font-bold mb-6">
-            Software Developer!
+            Software Developer
           </h2>
 
           <p className="text-gray-300 leading-relaxed mb-6">
