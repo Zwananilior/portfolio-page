@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  color: white;
+}
+
+.glow-ring {
+  box-shadow: 0 0 40px #00f0ff80;
+}
