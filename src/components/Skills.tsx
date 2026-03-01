@@ -24,7 +24,7 @@ const technicalSkills = [
 const professionalSkills = [
   { name: "Creativity", level: 90 },
   { name: "Communication", level: 75 },
-  { name: "Problem Solving", level: 85 },
+  { name: "Problem Solving", level: 80 },
   { name: "Teamwork", level: 85 },
 ];
 
