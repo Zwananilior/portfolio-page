@@ -8,7 +8,7 @@ const projects = [
     image:
       "https://images.unsplash.com/photo-1677442136019-21780ecad995",
     github: "https://github.com/zwananilior",
-    live: "#",
+    live: "https://soft-babka-fc82d7.netlify.app/",
   },
   {
     title: "Restaurant Mobile App",
