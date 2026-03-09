@@ -17,7 +17,7 @@ const projects = [
     image:
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d",
     github: "https://github.com/zwananilior/Restaurant-app.git",
-    live: "#",
+    live: "https://astounding-smakager-5181ef.netlify.app/",
   },
   {
     title: "Live Hosted Project",
