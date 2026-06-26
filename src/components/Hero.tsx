@@ -90,7 +90,7 @@ const Hero = () => {
         <div className="flex flex-wrap items-center gap-4 mt-6">
           {[
             { icon: FaGithub, link: "https://github.com/zwananilior" },
-            { icon: FaLinkedin, link: "https://www.linkedin.com/in/luyanda-zwanani-8a7943358" },
+            { icon: FaLinkedin, link: "https://www.linkedin.com/in/luyanda-masinga-8a7943358" },
             { icon: FaInstagram, link: "YOUR_INSTAGRAM_LINK_HERE" },
           ].map((item, i) => {
             const Icon = item.icon;
