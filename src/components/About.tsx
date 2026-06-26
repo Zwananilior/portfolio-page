@@ -45,11 +45,17 @@ const About = () => {
             clean architecture, responsive design, and user-friendly interfaces.
             I enjoy transforming ideas into interactive digital experiences
             that are visually engaging and technically efficient.
-          </p>
-
-          <button className="px-6 py-3 rounded-full border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition duration-300 shadow-[0_0_20px_#00f0ff]">
+          </p> 
+        <a 
+          href="https://github.com/zwananilior"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-6 py-3 rounded-full border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition duration-300 shadow-[0_0_20px_#00f0ff]"
+          >
             More About Me
-          </button>
+          </a>
+
+ 
         </motion.div>
       </div>
     </section>
